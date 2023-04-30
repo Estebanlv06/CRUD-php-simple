@@ -10,7 +10,7 @@
             echo "<td class='align-middle'>".$producto['nombre_producto']."</td>";
             echo "<td class='align-middle'>".$producto['detalle_producto']."</td>";
             echo "<td class='align-middle'>";
-            echo "<button type='button' class='btn btn-primary' onclick='openModal(".$producto['id_producto'].")'>Editar</button>";
+            echo "<button type='button' class='btn btn-primary' onclick='openModalproducto(".$producto['id_producto'].")'>Editar</button>";
             echo "<form action='' method='POST' style='display: inline-block;'>";
             echo "<input type='hidden' name='id' value='".$producto['id_producto']."'>";
             echo "<button type='submit' name='eliminar_producto' class='btn btn-danger'>Eliminar</button>";

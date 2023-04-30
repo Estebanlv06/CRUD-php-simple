@@ -68,7 +68,7 @@ if (isset($_POST['editar_bodega'])) {
 }
 
 // Verificar si se ha enviado el formulario de eliminar bodega
-if (isset($_POST['eliminar'])) {
+if (isset($_POST['eliminar_bodega'])) {
     $id_bodega = $_POST['id'];
     eliminar_bodega($id_bodega);
     header("Location: index.php");

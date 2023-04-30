@@ -3,22 +3,25 @@
     $productos = consultar_producto();
 
     if ($productos != null) {
+    
         foreach ($productos as $producto) {
             echo "<tr>";
-            echo "<td>".$producto['id_producto']."</td>";
-            echo "<td>".$producto['nombre_producto']."</td>";
-            echo "<td>".$producto['detalle_producto']."</td>";
-            echo "<td>";
-            echo "<button type='button' onclick='openModal(".$producto['id_producto'].")'>Editar</button>";
-            echo "<form action='' method='POST'>";
+            echo "<td class='align-middle'>".$producto['id_producto']."</td>";
+            echo "<td class='align-middle'>".$producto['nombre_producto']."</td>";
+            echo "<td class='align-middle'>".$producto['detalle_producto']."</td>";
+            echo "<td class='align-middle'>";
+            echo "<button type='button' class='btn btn-primary' onclick='openModal(".$producto['id_producto'].")'>Editar</button>";
+            echo "<form action='' method='POST' style='display: inline-block;'>";
             echo "<input type='hidden' name='id' value='".$producto['id_producto']."'>";
-            echo "<button type='submit' name='eliminar_producto'>Eliminar</button>";
+            echo "<button type='submit' name='eliminar_producto' class='btn btn-danger'>Eliminar</button>";
             echo "</form>";
             echo "</td>";
             echo "</tr>";
         }
+        echo "</tbody>";
+        echo "</table>";
     } else {
-        echo "<tr><td colspan='4'>No hay productos registrados.</td></tr>";
+        echo "<p>No hay productos registrados.</p>";
     }
 
     

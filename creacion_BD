@@ -1,0 +1,33 @@
+CREATE DATABASE crud_expertos;
+
+USE crud_expertos;
+
+CREATE TABLE productos (
+  id_producto INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre_producto VARCHAR(50) NOT NULL,
+  detalle_producto TEXT,
+  PRIMARY KEY (id_producto)
+);
+
+CREATE TABLE bodegas (
+  id_bodega INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre_bodega VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id_bodega)
+);
+
+
+CREATE TABLE productosbodegas (
+  id_producto INT UNSIGNED NOT NULL,
+  id_bodega INT UNSIGNED NOT NULL,
+  stock INT UNSIGNED NOT NULL,
+  PRIMARY KEY (id_producto, id_bodega),
+  FOREIGN KEY (id_producto) REFERENCES productos(id_producto),
+  FOREIGN KEY (id_bodega) REFERENCES bodegas(id_bodega)
+);
+
+
+--INSERT INTO productosbodegas (id_producto, id_bodega, stock) VALUES (120, 3, 0);
+--INSERT INTO productosbodegas (id_producto, id_bodega, stock) VALUES (121, 3, 0);
+--INSERT INTO productosbodegas (id_producto, id_bodega, stock) VALUES (122, 3, 0);
+--INSERT INTO productosbodegas (id_producto, id_bodega, stock) VALUES (123, 3, 0);
+--INSERT INTO productosbodegas (id_producto, id_bodega, stock) VALUES (124, 3, 0);

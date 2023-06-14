@@ -1,4 +1,4 @@
-# CRUD-php-simple (PROYECTO NO COMPLETO)
+# CRUD-php-simple (PROYECTO NO ESTA COMPLETO)
 
 Version php: 8.2.4
 
